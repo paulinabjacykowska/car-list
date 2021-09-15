@@ -13,11 +13,11 @@ export class FiltersComponent implements OnInit {
   @Output() changeFilter = new EventEmitter();
   cars!: Car[];
   showModelFilters!: boolean;
-  subscription!: Subscription;
+  toggleFiltersSubscription!: Subscription;
 
   constructor(private uiService: UiService, private carService: CarService) {
-    this.subscription = this.uiService
-      .onToggle()
+    this.toggleFiltersSubscription = this.uiService
+      .onToggleFilters()
       .subscribe((value) => (this.showModelFilters = value));
   }
 

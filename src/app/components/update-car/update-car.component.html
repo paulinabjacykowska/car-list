@@ -1,0 +1,42 @@
+<form
+  *ngIf="showUpdateComponent"
+  class="form-container"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="mb-3">
+    <label for="brand" class="form-label">Marka</label>
+    <input
+      name="brand"
+      type="text"
+      class="form-control"
+      id="marka"
+      [(ngModel)]="brand"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="model" class="form-label">Model</label>
+    <input
+      name="model"
+      type="text"
+      class="form-control"
+      id="model"
+      [(ngModel)]="model"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="rok_produkcji" class="form-label">Rok Produkcji</label>
+    <input
+      name="production_year"
+      type="number"
+      class="form-control"
+      id="rok_produkcji"
+      min="1900"
+      max="2099"
+      step="1"
+      [(ngModel)]="productionYear"
+    />
+  </div>
+  <div class="col button-container">
+    <input type="submit" value="Zapisz" class="btn btn-primary shadow-none" />
+  </div>
+</form>

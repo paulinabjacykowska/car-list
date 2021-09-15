@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { Subscription } from 'rxjs';
 import { CarService } from '../../services/car.service';
@@ -11,11 +11,11 @@ import { CarService } from '../../services/car.service';
 export class HeaderComponent implements OnInit {
   title: string = 'Lista samochodów';
   showModelFilters?: boolean = false;
-  subscription?: Subscription;
+  toggleFiltersSubscription?: Subscription;
 
   constructor(private uiService: UiService, private carService: CarService) {
-    this.subscription = this.uiService
-      .onToggle()
+    this.toggleFiltersSubscription = this.uiService
+      .onToggleFilters()
       .subscribe((value) => (this.showModelFilters = value));
   }
 

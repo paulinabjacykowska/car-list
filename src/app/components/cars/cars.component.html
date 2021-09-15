@@ -38,7 +38,20 @@
         {{ car.production_year }}
       </td>
       <td class="table-item">
-        <fa-icon [ngStyle]="{ color: '#f8961e' }" [icon]="faPen"></fa-icon>
+        <a routerLink="/update"
+          ><fa-icon
+            [ngStyle]="{ color: '#f8961e' }"
+            [icon]="faPen"
+            (click)="
+              toggleShowUpdateComponent(
+                car.brand,
+                car.model,
+                car.production_year,
+                car.id
+              )
+            "
+          ></fa-icon
+        ></a>
       </td>
       <td class="table-item">
         <fa-icon
@@ -50,3 +63,4 @@
     </tr>
   </tbody>
 </table>
+<app-update-car (onUpdateCar)="updateCar($event)"></app-update-car>

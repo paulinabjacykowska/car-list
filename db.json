@@ -2,27 +2,15 @@
   "cars": [
     {
       "brand": "audi",
-      "model": "a4",
-      "production_year": 2000,
+      "model": "a3",
+      "production_year": 2011,
       "id": 1
     },
     {
-      "brand": "toyota ",
+      "brand": "toyota",
       "model": "yaris",
-      "production_year": 1997,
-      "id": 2
-    },
-    {
-      "brand": "skoda",
-      "model": "octavia",
-      "production_year": 2008,
+      "production_year": 2012,
       "id": 3
-    },
-    {
-      "brand": "efef",
-      "model": "orbaia",
-      "production_year": 2000,
-      "id": 4
     }
   ]
 }
