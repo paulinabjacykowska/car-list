@@ -32,10 +32,6 @@ export class CarsComponent implements OnInit {
     this.carService.addCar(car).subscribe((car) => this.cars.push(car));
   }
 
-  updateCar(car: Car) {
-    this.carService.updateCar(car);
-  }
-
   sort(key: string) {
     this.key = key;
     this.reverse = !this.reverse;

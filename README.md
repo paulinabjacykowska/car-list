@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
 
-For the app to work you need tu run development and JSON server.
+For the app to work you need to run `npm install` and then run development and JSON server.
 
 ## Development server
 

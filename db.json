@@ -1,3 +1,22 @@
 {
-  "cars": []
+  "cars": [
+    {
+      "brand": "audi",
+      "model": "a4",
+      "production_year": 2000,
+      "id": 1
+    },
+    {
+      "brand": "toyota ",
+      "model": "yaris",
+      "production_year": 1997,
+      "id": 2
+    },
+    {
+      "brand": "skoda",
+      "model": "octavia",
+      "production_year": 2008,
+      "id": 3
+    }
+  ]
 }
