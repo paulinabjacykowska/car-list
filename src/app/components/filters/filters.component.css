@@ -1,0 +1,22 @@
+.main-container {
+  margin: 0px 30px 30px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #83c5be !important;
+  color: white !important;
+}
+
+.btn {
+  border-color: #83c5be !important;
+  color: #83c5be !important;
+  margin-right: 20px;
+}

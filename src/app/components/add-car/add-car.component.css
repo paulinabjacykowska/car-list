@@ -1,0 +1,17 @@
+.form-control:focus {
+  box-shadow: none;
+}
+
+.row {
+  margin: 0px 30px 30px 30px;
+}
+
+.btn {
+  background-color: #90be6d;
+  border-color: #90be6d;
+}
+
+.button-container {
+  margin-top: 30px;
+  margin-left: 30px;
+}

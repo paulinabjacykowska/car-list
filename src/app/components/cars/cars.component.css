@@ -1,0 +1,17 @@
+.table {
+  width: 91%;
+  margin-left: 4%;
+  outline-width: 2px;
+  outline-style: solid;
+  margin-top: 20px;
+}
+
+.table-item,
+.column-title {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sort-icon {
+  margin-left: 10px;
+}

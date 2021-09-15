@@ -1,0 +1,44 @@
+<form class="row" (ngSubmit)="onSubmit()">
+  <div class="col">
+    <label for="brand" class="form-label">Marka</label>
+    <input
+      type="text"
+      name="brand"
+      class="form-control"
+      id="brand"
+      placeholder="Podaj markę..."
+      [(ngModel)]="brand"
+    />
+  </div>
+  <div class="col">
+    <label for="model" class="form-label">Model</label>
+    <input
+      type="text"
+      name="model"
+      class="form-control"
+      id="model"
+      placeholder="Podaj model..."
+      [(ngModel)]="model"
+    />
+  </div>
+  <div class="col">
+    <label for="production_year" class="form-label">Rok produkcji</label>
+    <input
+      type="number"
+      name="production_year"
+      class="form-control"
+      id="production_year"
+      min="1900"
+      max="2099"
+      step="1"
+      [(ngModel)]="production_year"
+    />
+  </div>
+  <div class="col button-container">
+    <input
+      type="submit"
+      value="Dodaj auto"
+      class="btn btn-primary shadow-none"
+    />
+  </div>
+</form>

@@ -1,0 +1,13 @@
+<div>
+  <div class="header-container">
+    <h2 class="title">{{ title }}</h2>
+    <div>
+      <app-button
+        backgroundColor="#83c5be"
+        borderColor="#83c5be"
+        text="{{ showModelFilters ? 'Zamknij' : 'Filtry' }}"
+        (btnClick)="toggleShowModelFilters()"
+      ></app-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<app-filters></app-filters>
+<app-add-car (onAddCar)="addCar($event)"></app-add-car>
+<table class="table table-light">
+  <thead class="table-dark">
+    <tr>
+      <th (click)="sort('brand')" class="column-title" scope="col">
+        Brand&nbsp;<fa-icon
+          [ngStyle]="{ color: 'white' }"
+          class="sort-icon"
+          [icon]="faSort"
+        ></fa-icon>
+      </th>
+      <th (click)="sort('model')" class="column-title" scope="col">
+        Model&nbsp;<fa-icon
+          [ngStyle]="{ color: 'white' }"
+          class="sort-icon"
+          [icon]="faSort"
+        ></fa-icon>
+      </th>
+      <th (click)="sort('production_year')" class="column-title" scope="col">
+        Production Year&nbsp;<fa-icon
+          [ngStyle]="{ color: 'white' }"
+          class="sort-icon"
+          [icon]="faSort"
+        ></fa-icon>
+      </th>
+      <th class="column-title" scope="col"></th>
+      <th class="column-title" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars | orderBy: key:reverse">
+      <td class="table-item">
+        {{ car.brand }}
+      </td>
+      <td class="table-item">{{ car.model }}</td>
+      <td class="table-item">
+        {{ car.production_year }}
+      </td>
+      <td class="table-item">
+        <fa-icon [ngStyle]="{ color: '#f8961e' }" [icon]="faPen"></fa-icon>
+      </td>
+      <td class="table-item">
+        <fa-icon
+          [ngStyle]="{ color: '#f94144' }"
+          [icon]="faTrash"
+          (click)="deleteCar(car)"
+        ></fa-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>
