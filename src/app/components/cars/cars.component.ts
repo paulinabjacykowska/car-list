@@ -36,4 +36,19 @@ export class CarsComponent implements OnInit {
     this.key = key;
     this.reverse = !this.reverse;
   }
+
+  filterByModel(filteredValue: string) {
+    if (filteredValue.length > 0) {
+      this.carService
+        .getCars()
+        .subscribe(
+          (cars) =>
+            (this.cars = cars.filter((car) =>
+              car.model.includes(filteredValue)
+            ))
+        );
+    } else {
+      this.ngOnInit();
+    }
+  }
 }

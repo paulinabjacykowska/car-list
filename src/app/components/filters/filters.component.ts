@@ -10,10 +10,10 @@ import { CarService } from '../../services/car.service';
   styleUrls: ['./filters.component.css'],
 })
 export class FiltersComponent implements OnInit {
+  @Output() changeFilter = new EventEmitter();
   cars!: Car[];
   showModelFilters!: boolean;
   subscription!: Subscription;
-  model!: string;
 
   constructor(private uiService: UiService, private carService: CarService) {
     this.subscription = this.uiService
@@ -23,5 +23,10 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
     this.carService.getCars().subscribe((cars) => (this.cars = cars));
+  }
+
+  onChange(event: KeyboardEvent) {
+    const filteredValues = (event.target as HTMLInputElement).value;
+    this.changeFilter.emit(filteredValues);
   }
 }

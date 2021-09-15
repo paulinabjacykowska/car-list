@@ -1,4 +1,4 @@
-<app-filters></app-filters>
+<app-filters (changeFilter)="filterByModel($event)"></app-filters>
 <app-add-car (onAddCar)="addCar($event)"></app-add-car>
 <table class="table table-light">
   <thead class="table-dark">
